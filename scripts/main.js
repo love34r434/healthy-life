@@ -1,7 +1,15 @@
 // loading content
 async function loadContent(pageId, pageTitle, headerTitle) {
-    const content = await fetch(`pages/${pageId}.html`).then(response => response.text());
-    document.getElementById('content').innerHTML = content;
+    try {
+        const response = await fetch(`pages/${pageId}.html`);
+        if (!response.ok) {
+            throw new Error(`Error loading page: ${response.statusText}`);
+        }
+        const content = await response.text();
+        document.getElementById('content').innerHTML = content;
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 // default load pages/index.html
