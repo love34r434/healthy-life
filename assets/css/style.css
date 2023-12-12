@@ -1,0 +1,39 @@
+:root {
+    --dark-green: #14342bff;
+    --asparagus: #60935dff;
+    --white: #ffffffff;
+    --old-gold: #bab700ff;
+    --licorice: #140009ff;
+  }
+body {
+    background-color: var(--licorice);
+    font-family: 'Quicksand', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: var(--dark-green);
+}
+a, a:visited {
+    color: var(--asparagus);
+}
+a:hover, a:active {
+    color: var(--dark-green);
+}
+a:active {
+    text-decoration: none;
+}
+#wrapper {
+    color: var(--old-gold);
+    margin: 0 auto;
+    padding: 20px 0;
+    width: 100%;
+    max-width: 1000px;
+}
+main {
+    background-color: var(--white);
+    color: var(--dark-green);
+    margin: 0;
+    width: 100%;
+}
+footer {
+    font-size: small;
+}
