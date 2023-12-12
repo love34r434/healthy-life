@@ -21,6 +21,11 @@ a:hover, a:active {
 a:active {
     text-decoration: none;
 }
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 nav ul {
     list-style-type: none;
     display: flex;
@@ -28,6 +33,7 @@ nav ul {
     flex-wrap: nowrap;
     justify-content: center;
     border: 1px solid red;
+    padding: 10px 20px;
 }
 nav ul li {
     margin: 0;
@@ -40,6 +46,7 @@ nav ul li:first-of-type {
 nav a {
     display: block;
     padding: 10px 20px;
+    text-decoration: none;;
 }
 nav a:hover, nav a.current {
     color: var(--old-gold);
@@ -50,7 +57,7 @@ nav a.current {
 #wrapper {
     color: var(--old-gold);
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 0;
     width: 100%;
     max-width: 1000px;
 }
