@@ -32,8 +32,8 @@ nav ul {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    border: 1px solid red;
-    padding: 10px 20px;
+    margin: 25px;
+    padding: 0;
 }
 nav ul li {
     margin: 0;
@@ -46,7 +46,8 @@ nav ul li:first-of-type {
 nav a {
     display: block;
     padding: 10px 20px;
-    text-decoration: none;;
+    text-decoration: none;
+    height: fit-content;
 }
 nav a:hover, nav a.current {
     color: var(--old-gold);
