@@ -1,6 +1,6 @@
 // loading content
 async function loadContent(pageId, pageTitle, headerTitle) {
-    const url = pageId ? `/pages/${pageId}.html` : '/pages/index.html';
+    const url = pageId ? `pages/${pageId}.html` : 'pages/index.html';
 
     fetch(url)
         .then(response => response.text())
