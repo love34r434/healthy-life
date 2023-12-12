@@ -1,9 +1,9 @@
 :root {
-    --dark-green: #14342bff;
-    --asparagus: #60935dff;
-    --white: #ffffffff;
-    --old-gold: #bab700ff;
-    --licorice: #140009ff;
+    --dark-green: #14342b;
+    --asparagus: #60935d;
+    --white: #fefefe;
+    --old-gold: #bab700;
+    --licorice: #140009;
   }
 body {
     background-color: var(--licorice);
@@ -67,6 +67,7 @@ main {
     color: var(--dark-green);
     margin: 0;
     width: 100%;
+    padding: 40px;
 }
 footer {
     font-size: small;
