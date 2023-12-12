@@ -7,5 +7,5 @@ async function loadContent(pageId, pageTitle, headerTitle) {
 
 //default load pages/index.html
 document.addEventListener('DOMContentLoaded', function() {
-    loadContent('index');
+    loadContent('pages/index.html');
 })
