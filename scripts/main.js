@@ -1,7 +1,7 @@
 // loading content
 async function loadContent(pageId, pageTitle, headerTitle) {
     try {
-        const response = await fetch(`/pages/${pageId}.html`);
+        const response = await fetch(`/healthy-life/pages/${pageId}.html`);
         if (!response.ok) {
             throw new Error(`Error loading page: ${response.statusText}`);
         }
