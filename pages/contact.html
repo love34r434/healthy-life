@@ -176,43 +176,7 @@
     </div>
   </div>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const accordions = document.querySelectorAll('.accordion');
-
-        accordions.forEach(accordion => {
-            accordion.addEventListener('click', function () {
-                const targetId = this.getAttribute('data-target');
-                const targetForm = document.getElementById(targetId);
-                const otherForms = document.querySelectorAll('.contactForm:not(#' + targetId + ')');
-
-                // Toggle the visibility of the target form
-                targetForm.style.display = targetForm.style.display === 'block' ? 'none' : 'block';
-
-                // Hide other forms
-                otherForms.forEach(form => form.style.display = 'none');
-            });
-        });
-
-        var acc = document.querySelector('.accordion');
-        var panel = document.querySelector('.panel');
-
-        acc.addEventListener('click', function () {
-            panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
-        });
-
-        var sendMessageForm = document.getElementById('sendMessageForm');
-
-        sendMessageForm.addEventListener('input', function () {
-            var isFormValid = sendMessageForm.checkValidity();
-            sendMessageForm.querySelector('button[type="submit"]').disabled = !isFormValid;
-        });
-
-        sendMessageForm.addEventListener('submit', function (event) {
-            event.preventDefault();
-            alert('Message sent!');
-            sendMessageForm.reset();
-        });
-    });
+    
  
 </script>
 </div>
