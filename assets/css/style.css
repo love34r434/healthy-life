@@ -8,9 +8,19 @@
 body {
     background-color: var(--licorice);
     font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
 }
 h1, h2, h3, h4, h5, h6 {
     color: var(--dark-green);
+    font-weight: 500;
+}
+h1 {
+    font-size: 3em;
+    padding: 0 0 10px;
+    border-bottom: 1px solid var(--dark-green);
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0 0 20px 0;
 }
 a, a:visited, nav a, nav a:visited {
     color: var(--asparagus);
@@ -74,4 +84,22 @@ footer {
     margin: 0;
     padding: 10px;
     text-align: center;
+}
+.golden-box {
+    border: 2px solid var(--old-gold);
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.golden-box-caption {
+    background-color:  var(--old-gold);
+    color: var(--licorice);
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.golden-box-content {
+    color: var(--dark-green);
+    margin: 0;
+    padding: 10px 20px;
 }

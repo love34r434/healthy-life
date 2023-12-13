@@ -1,5 +1,5 @@
 // loading content
-async function loadContent(pageId, pageTitle, headerTitle) {
+async function loadContent(pageId, pageTitle) {
     const url = pageId ? `pages/${pageId}.html` : 'pages/index.html';
 
     fetch(url)
@@ -8,9 +8,7 @@ async function loadContent(pageId, pageTitle, headerTitle) {
             document.getElementById('content').innerHTML = content;
             // add title
             document.getElementById('page-title').textContent = pageTitle || 'Healthy Life Support Community';
-            // add header
-            document.getElementById('header-title').textContent = headerTitle || '';
-
+           
             //changing url
             window.history.pushState({ pageId: pageId}, null, pageId ? `?page=${pageId}` : '/');
         })
@@ -21,12 +19,12 @@ async function loadContent(pageId, pageTitle, headerTitle) {
 
 window.addEventListener('popstate', function (event) {
     const pageId = event.state ? event.state.pageId : 'index';
-    loadContent(pageId, pageTitle, headerTitle);
+    loadContent(pageId, pageTitle);
     // highlightCurrentPage(pageId);
 });
 
 
 // default load pages/index.html
 document.addEventListener('DOMContentLoaded', function() {
-    loadContent('index', 'Healthy Life Support Community', '');
+    loadContent('index', 'Healthy Life Support Community');
 });
