@@ -11,13 +11,14 @@ body {
     font-size: 1em;
 }
 h1, h2, h3, h4, h5, h6 {
-    color: var(--dark-green);
+    color: var(--asparagus);
     font-weight: 500;
 }
 h1 {
     font-size: 3em;
     padding: 0 0 10px;
-    border-bottom: 1px solid var(--dark-green);
+    border-bottom: 1px solid var(--asparagus);
+    text-align: center;
 }
 h1, h2, h3, h4, h5, h6, p {
     margin: 0 0 20px 0;
@@ -78,6 +79,10 @@ main {
     margin: 0;
     width: 100%;
     padding: 40px;
+}
+#header-img {
+    opacity: 0.8;
+    width: auto;
 }
 footer {
     font-size: small;
