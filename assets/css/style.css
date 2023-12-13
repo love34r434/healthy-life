@@ -96,6 +96,7 @@ footer {
     color: var(--licorice);
     margin: 0;
     padding: 10px 20px;
+    font-weight: 400;
 }
 
 .golden-box-content {
