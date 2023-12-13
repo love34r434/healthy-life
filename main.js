@@ -20,9 +20,9 @@ window.addEventListener('popstate', function (event) {
     loadContent(pageId, pageTitle);
 });
 
-//default load pages/index.html
 document.addEventListener('DOMContentLoaded', function() {
-    //loadContent('index', 'Healthy Life');
+    loadContent('index', 'Healthy Life');  //load default
+
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
 
