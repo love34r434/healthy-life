@@ -141,14 +141,14 @@ footer {
 }
 
 .active, .accordion:hover {
-    background-color: #f1f1f1;
+    background-color: var(--white);
 }
 
 .panel {
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: var(--white);
 }
 
 .panel input,
@@ -163,7 +163,7 @@ footer {
 
 .panel input:valid,
 .panel textarea:valid {
-    border-color: green;
+    border-color: var(--asparagus);
 }
 
 .panel input:invalid,
@@ -172,8 +172,8 @@ footer {
 }
 
 .panel button {
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--asparagus);
+    color: var(--white);
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
