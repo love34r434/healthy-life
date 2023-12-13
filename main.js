@@ -1,4 +1,4 @@
-async function loadContent(pageId, pageTitle) {
+async function loadContent(pageId) {
     const url = pageId ? `pages/${pageId}.html` : 'pages/index.html';
 
     fetch(url)
@@ -7,14 +7,17 @@ async function loadContent(pageId, pageTitle) {
             document.getElementById('content').innerHTML = content;
 
             //adding title
-            document.getElementById('page-title').textContent = pageTitle || 'Healthy Life';
+            const pageTitleElement = document.getElementById('title-of-page');
+            const pageTitle = pageTitleElement ? pageTitleElement.textContent : 'Healthy Life';
+            document.getElementById('page-title').textContent = pageTitle;
 
             //changing url
             window.history.pushState({pageId: pageId}, null, pageId ? `?page=${pageId}` : '/');
         })
         .catch(error => console.error('Error fetching content:', error));
-    
-    if (pageId === 'contacts') {
+        
+    //load script for form and accordion
+    if (pageId === 'contact') {
         const script = document.createElement('script');
         script.src = 'assets/js/form.js';
         document.getElementById('add-scripts').appendChild(script);
@@ -23,7 +26,7 @@ async function loadContent(pageId, pageTitle) {
 
 window.addEventListener('popstate', function (event) {
     const pageId = event.state ? event.state.pageId : 'index';
-    loadContent(pageId, pageTitle);
+    loadContent(pageId);
 });
 
 document.addEventListener('DOMContentLoaded', function() {
