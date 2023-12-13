@@ -8,8 +8,8 @@
     />
   </div>
   <p>
-    We meet at <strong>Civic Hall</strong> in Slaithwaite. <strong>25 Cartoon Street, Slaithwaite, HD7
-    5EH</strong>
+    We meet at <strong>Civic Hall</strong> in Slaithwaite.
+    <strong>25 Cartoon Street, Slaithwaite, HD7 5EH</strong>
   </p>
   <p>Our contact phone: <strong>07720200202</strong></p>
   <p>Our e-mail: <strong>healthy-life@gmail.com</strong></p>
@@ -19,155 +19,220 @@
     possible. Your journey to a healthier life starts with a simple message.
   </p>
 
-  <div class="golden-box">
-    <div class="golden-box-caption">Send us a Message</div>
-    <div class="golden-box-content">
-      <button class="accordion" data-target="sendMessage">Show the form</button>
-      <div class="panel">
-        <form id="sendMessage" class="contactForm">
-          <!-- Fields for the "Send Message" form -->
-          <label for="email">E-mail:</label>
-          <input type="email" id="email" name="email" required />
+  <div>
+    <div class="golden-box">
+      <div class="golden-box-caption">Send us a Message</div>
+      <div class="golden-box-content">
+        <button class="accordion" data-target="sendMessage">
+          Show the form
+        </button>
+        <div class="panel">
+          <form id="sendMessage" class="contactForm">
+            <!-- Fields for the "Send Message" form -->
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required />
 
-          <label for="phone">Phone:</label>
-          <input type="tel" id="phone" name="phone" pattern="\d{11}" required />
+            <label for="phone">Phone:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="\d{11}"
+              required
+            />
 
-          <label for="message">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            pattern="[a-zA-Z.,\s]+"
-            required
-          ></textarea>
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              pattern="[a-zA-Z.,\s]+"
+              required
+            ></textarea>
 
-          <button type="reset" class="resetBtn">Reset</button>
-          <button type="submit" class="submitBtn" disabled>Submit</button>
-        </form>
+            <button type="reset" class="resetBtn">Reset</button>
+            <button type="submit" class="submitBtn" disabled>Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="golden-box">
+      <div class="golden-box-caption">Fill the Membership form</div>
+      <div class="golden-box-content">
+        <button class="accordion" data-target="membershipForm">
+          Show the form for Membership
+        </button>
+        <div class="panel">
+          <form id="membershipForm" class="contactForm">
+            <!-- Fields for the "Membership" form -->
+            <label for="title">Title:</label>
+            <select id="title" name="title" required>
+              <option value="" selected disabled>--Choose the title--</option>
+              <option value="Mr">Mr.</option>
+              <option value="Miss">Miss</option>
+              <option value="Ms.">Ms.</option>
+              <option value="Mrs.">Mrs.</option>
+              <option value="Mx.">Mx.</option>
+            </select>
+
+            <label for="firstName">First name:</label>
+            <input type="text" id="firstName" name="firstName" required />
+
+            <label for="middleName">Middle name (optional):</label>
+            <input type="text" id="middleName" name="middleName" />
+
+            <label for="lastName">Last name:</label>
+            <input type="text" id="lastName" name="lastName" required />
+
+            <fieldset>
+              <legend>Age group:</legend>
+              <input
+                type="radio"
+                id="age18-24"
+                name="ageGroup"
+                value="18-24"
+                required
+              />
+              <label for="age18-24">18-24</label>
+
+              <input
+                type="radio"
+                id="age25-35"
+                name="ageGroup"
+                value="25-35"
+                required
+              />
+              <label for="age25-35">25-35</label>
+
+              <input
+                type="radio"
+                id="age36-49"
+                name="ageGroup"
+                value="36-49"
+                required
+              />
+              <label for="age36-49">36-49</label>
+
+              <input
+                type="radio"
+                id="age50-69"
+                name="ageGroup"
+                value="50-69"
+                required
+              />
+              <label for="age50-69">50-69</label>
+
+              <input
+                type="radio"
+                id="age70+"
+                name="ageGroup"
+                value="70+"
+                required
+              />
+              <label for="age70+">70+</label>
+
+              <input
+                type="radio"
+                id="agePreferNotToSay"
+                name="ageGroup"
+                value="prefer-not-to-say"
+                required
+              />
+              <label for="agePreferNotToSay">Prefer not to say</label>
+            </fieldset>
+
+            <label for="maritalStatus">Marital status:</label>
+            <select id="maritalStatus" name="maritalStatus" required>
+              <option value="" selected disabled>
+                --Choose marital status--
+              </option>
+              <option value="single">Single</option>
+              <option value="married">Married</option>
+              <option value="inRelationship">In a relationship</option>
+              <option value="preferNotToSay">Prefer not to say</option>
+            </select>
+
+            <label for="hobbies">Hobbies, Interests:</label>
+            <textarea
+              id="hobbies"
+              name="hobbies"
+              pattern="[a-zA-Z.,\s]+"
+              required
+            ></textarea>
+
+            <!-- Contacts -->
+            <label for="phone">Phone:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="\d{11}"
+              required
+            />
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required />
+
+            <button type="reset">Reset</button>
+            <button type="submit" disabled>Submit</button>
+
+            <p>
+              By clicking "Submit" button you agree that your information will
+              be shared with our community.
+            </p>
+          </form>
+        </div>
       </div>
     </div>
   </div>
+  <script>
+    //accordion and form validator
+    document.addEventListener("DOMContentLoader", function () {
+      const accordion = document.querySelectorAll(".accordion");
 
-  <div class="golden-box">
-    <div class="golden-box-caption">Fill the Membership form</div>
-    <div class="golden-box-content">
-      <button class="accordion" data-target="membershipForm">
-        Show the form for Membership
-      </button>
-      <div class="panel">
-        <form id="membershipForm" class="contactForm">
-          <!-- Fields for the "Membership" form -->
-          <label for="title">Title:</label>
-          <select id="title" name="title" required>
-            <option value="" selected disabled>--Choose the title--</option>
-            <option value="Mr">Mr.</option>
-            <option value="Miss">Miss</option>
-            <option value="Ms.">Ms.</option>
-            <option value="Mrs.">Mrs.</option>
-            <option value="Mx.">Mx.</option>
-          </select>
+      accordion.forEach((accordion) => {
+        accordion.addEventListener("click", function () {
+          const targetId = this.getAttribute("data-target");
+          const targetForm = document.getElementById(targetId);
+          const otherForms = document.querySelectorAll(
+            ".contactForm:not(#" + targetId + ")"
+          );
 
-          <label for="firstName">First name:</label>
-          <input type="text" id="firstName" name="firstName" required />
+          //Toggle the visibility of the target form
+          if (targetForm.style.display === "block") {
+            targetForm.style.display = "none";
+            this.textContent = "Show Form";
+          } else {
+            targetForm.style.display = "block";
+            this.textContent = "Hide Form";
+          }
 
-          <label for="middleName">Middle name (optional):</label>
-          <input type="text" id="middleName" name="middleName" />
+          //Hide other Forms
+          otherForms.forEach((form) => (form.style.display = "none"));
+        });
+      });
 
-          <label for="lastName">Last name:</label>
-          <input type="text" id="lastName" name="lastName" required />
+      var acc = document.querySelector(".accordion");
+      var panel = document.querySelector(".panel");
 
-          <fieldset>
-            <legend>Age group:</legend>
-            <input
-              type="radio"
-              id="age18-24"
-              name="ageGroup"
-              value="18-24"
-              required
-            />
-            <label for="age18-24">18-24</label>
+      acc.addEventListener("click", function () {
+        panel.style.display =
+          panel.style.display === "block" ? "none" : "block";
+      });
 
-            <input
-              type="radio"
-              id="age25-35"
-              name="ageGroup"
-              value="25-35"
-              required
-            />
-            <label for="age25-35">25-35</label>
+      var sendMessageForm = document.getElementById("sendMessageForm");
 
-            <input
-              type="radio"
-              id="age36-49"
-              name="ageGroup"
-              value="36-49"
-              required
-            />
-            <label for="age36-49">36-49</label>
+      sendMessageForm.addEventListener("input", function () {
+        var isFormValid = sendMessageForm.checkValidity();
+        sendMessageForm.querySelector('button[type="submit"]').disabled =
+          !isFormValid;
+      });
 
-            <input
-              type="radio"
-              id="age50-69"
-              name="ageGroup"
-              value="50-69"
-              required
-            />
-            <label for="age50-69">50-69</label>
-
-            <input
-              type="radio"
-              id="age70+"
-              name="ageGroup"
-              value="70+"
-              required
-            />
-            <label for="age70+">70+</label>
-
-            <input
-              type="radio"
-              id="agePreferNotToSay"
-              name="ageGroup"
-              value="prefer-not-to-say"
-              required
-            />
-            <label for="agePreferNotToSay">Prefer not to say</label>
-          </fieldset>
-
-          <label for="maritalStatus">Marital status:</label>
-          <select id="maritalStatus" name="maritalStatus" required>
-            <option value="" selected disabled>
-              --Choose marital status--
-            </option>
-            <option value="single">Single</option>
-            <option value="married">Married</option>
-            <option value="inRelationship">In a relationship</option>
-            <option value="preferNotToSay">Prefer not to say</option>
-          </select>
-
-          <label for="hobbies">Hobbies, Interests:</label>
-          <textarea
-            id="hobbies"
-            name="hobbies"
-            pattern="[a-zA-Z.,\s]+"
-            required
-          ></textarea>
-
-          <!-- Contacts -->
-          <label for="phone">Phone:</label>
-          <input type="tel" id="phone" name="phone" pattern="\d{11}" required />
-
-          <label for="email">E-mail:</label>
-          <input type="email" id="email" name="email" required />
-
-          <button type="reset">Reset</button>
-          <button type="submit" disabled>Submit</button>
-
-          <p>
-            By clicking "Submit" button you agree that your information will be
-            shared with our community.
-          </p>
-        </form>
-      </div>
-    </div>
-  </div>
+      sendMessageForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        alert("Form sent!");
+        sendMessageForm.reset();
+      });
+    });
+  </script>
 </div>
-
