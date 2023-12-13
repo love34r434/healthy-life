@@ -29,6 +29,12 @@ h1, h2, h3, h4, h5, h6, p {
     background-color: var(--dark-green);
     color: var(--white);
 }
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
 a, a:visited, nav a, nav a:visited {
     color: var(--asparagus);
 }
@@ -93,6 +99,7 @@ main {
 #header-img {
     opacity: 0.8;
     width: 100%;
+    margin-bottom: 20px;
 }
 footer {
     font-size: small;
