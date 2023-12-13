@@ -40,7 +40,13 @@ document.addEventListener('DOMContentLoaded', function () {
             const otherForms = document.querySelectorAll('.contactForm:not(#' + targetId + ')');
 
             // Toggle the visibility of the target form
-            targetForm.style.display = targetForm.style.display === 'block' ? 'none' : 'block';
+            if (targetForm.style.display === 'block') {
+                targetForm.style.display = 'none';
+                this.textContent = 'Show Form';  
+            } else {
+                targetForm.style.display = 'block';
+                this.textContent = 'Hide Form';  
+            }
 
             // Hide other forms
             otherForms.forEach(form => form.style.display = 'none');
