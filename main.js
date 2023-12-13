@@ -13,6 +13,12 @@ async function loadContent(pageId, pageTitle) {
             window.history.pushState({pageId: pageId}, null, pageId ? `?page=${pageId}` : '/');
         })
         .catch(error => console.error('Error fetching content:', error));
+    
+    if (pageId === 'contacts') {
+        const script = document.createElement('script');
+        script.src = 'assets/js/form.js';
+        document.getElementById('add-scripts').appendChild(script);
+    }
 }
 
 window.addEventListener('popstate', function (event) {
@@ -21,7 +27,7 @@ window.addEventListener('popstate', function (event) {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    loadContent('index', 'Healthy Life');  //load default
+    loadContent('index', 'Healthy Life');  //default load index.html
 
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');

@@ -27,7 +27,7 @@
           Show the form
         </button>
         <div class="panel">
-          <form id="sendMessage" class="contactForm">
+          <form id="sendMessage" class="contactForm" method="post">
             <!-- Fields for the "Send Message" form -->
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email" required />
@@ -63,7 +63,7 @@
           Show the form for Membership
         </button>
         <div class="panel">
-          <form id="membershipForm" class="contactForm">
+          <form id="membershipForm" class="contactForm" method="post">
             <!-- Fields for the "Membership" form -->
             <label for="title">Title:</label>
             <select id="title" name="title" required>
@@ -185,54 +185,4 @@
       </div>
     </div>
   </div>
-  <script>
-    //accordion and form validator
-    document.addEventListener("DOMContentLoaded", function () {
-      const accordion = document.querySelectorAll(".accordion");
-
-      accordion.forEach((accordion) => {
-        accordion.addEventListener("click", function () {
-          const targetId = this.getAttribute("data-target");
-          const targetForm = document.getElementById(targetId);
-          const otherForms = document.querySelectorAll(
-            ".contactForm:not(#" + targetId + ")"
-          );
-
-          //Toggle the visibility of the target form
-          if (targetForm.style.display === "block") {
-            targetForm.style.display = "none";
-            this.textContent = "Show Form";
-          } else {
-            targetForm.style.display = "block";
-            this.textContent = "Hide Form";
-          }
-
-          //Hide other Forms
-          otherForms.forEach((form) => (form.style.display = "none"));
-        });
-      });
-
-      var acc = document.querySelector(".accordion");
-      var panel = document.querySelector(".panel");
-
-      acc.addEventListener("click", function () {
-        panel.style.display =
-          panel.style.display === "block" ? "none" : "block";
-      });
-
-      var sendMessageForm = document.getElementById("sendMessageForm");
-
-      sendMessageForm.addEventListener("input", function () {
-        var isFormValid = sendMessageForm.checkValidity();
-        sendMessageForm.querySelector('button[type="submit"]').disabled =
-          !isFormValid;
-      });
-
-      sendMessageForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        alert("Form sent!");
-        sendMessageForm.reset();
-      });
-    });
-  </script>
 </div>
