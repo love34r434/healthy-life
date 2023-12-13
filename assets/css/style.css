@@ -122,3 +122,69 @@ footer {
     margin: 0;
     padding: 10px 20px;
 }
+
+//forms and accordions 
+.accordion {
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: 1px solid #ddd;
+    outline: none;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #f1f1f1;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+.panel input,
+.panel textarea {
+    width: calc(100% - 16px);
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.panel input:valid,
+.panel textarea:valid {
+    border-color: green;
+}
+
+.panel input:invalid,
+.panel textarea:invalid {
+    border-color: orange;
+}
+
+.panel button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.panel button:hover:disabled {
+    opacity: 0.5;
+}
+
+.panel button:enabled {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.panel button:hover {
+    opacity: 0.8;
+}
