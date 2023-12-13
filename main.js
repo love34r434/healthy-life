@@ -22,5 +22,19 @@ window.addEventListener('popstate', function (event) {
 
 //default load pages/index.html
 document.addEventListener('DOMContentLoaded', function() {
-    loadContent('index', 'Healthy Life');
+    //loadContent('index', 'Healthy Life');
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    if (menuToggle && nav) {
+        menuToggle.addEventListener('click', function () {
+            if (window.getComputedStyle(nav).display !== 'none') {
+                nav.classList.toggle('active');
+            }
+        });
+    }
+
+    
 });
+
+
