@@ -23,6 +23,12 @@ h1 {
 h1, h2, h3, h4, h5, h6, p {
     margin: 0 0 20px 0;
 }
+.dark {
+    padding: 10px 20px;
+    text-align: center;
+    background-color: var(--dark-green);
+    color: var(--white);
+}
 a, a:visited, nav a, nav a:visited {
     color: var(--asparagus);
 }
