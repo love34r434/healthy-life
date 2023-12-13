@@ -152,6 +152,7 @@ footer {
 }
 
 .panel input,
+.panel select,
 .panel textarea {
     width: calc(100% - 16px);
     padding: 12px;
@@ -162,11 +163,13 @@ footer {
 }
 
 .panel input:valid,
+.panel select:valid,
 .panel textarea:valid {
     border-color: var(--asparagus);
 }
 
 .panel input:invalid,
+.panel select:invalid,
 .panel textarea:invalid {
     border-color: orange;
 }
