@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     membershipForm.addEventListener("input", function () {
         var isFormValid = membershipForm.checkValidity();
-        membershipForm.querySelector('button[type="submit"]').disabled = !isFormValid;
+        membershipForm.querySelector('button[type="submit"]').disabled = isFormValid;
     });
 
     membershipForm.addEventListener("submit", function (event) {
