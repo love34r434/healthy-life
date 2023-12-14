@@ -19,7 +19,7 @@ async function loadContent(pageId) {
     //load script for form and accordion
     if (pageId === 'contact') {
         const script = document.createElement('script');
-        script.src = 'assets/js/form.js';
+        script.src = '/assets/js/form.js';
         document.getElementById('add-scripts').appendChild(script);
     }
 }
