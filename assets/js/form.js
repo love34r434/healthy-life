@@ -1,29 +1,33 @@
-console.log('form.js is loaded');
-
 document.addEventListener("DOMContentLoaded", function () {
-     var sendMessageForm = document.getElementById("sendMessageForm");
+    // Делегирование событий для изменения в формах
+    document.addEventListener("change", function (event) {
+        var form = event.target.form;
 
-    sendMessageForm.addEventListener('change', function () {
-        var isFormValid = sendMessageForm.checkValidity();
-        sendMessageForm.querySelector('button[type="submit"]').disabled = !isFormValid;
+        if (form && (form.id === "sendMessageForm" || form.id === "membershipForm")) {
+            handleFormInput(form);
+        }
     });
 
-    sendMessageForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-        alert("Message sent!");
-        sendMessageForm.reset();
+    // Делегирование событий для отправки форм
+    document.addEventListener("submit", function (event) {
+        event.preventDefault(); // предотвратить стандартное поведение отправки формы
+        var form = event.target;
+
+        if (form && (form.id === "sendMessageForm" || form.id === "membershipForm")) {
+            handleFormSubmit(form);
+        }
     });
 
-    var membershipForm = document.getElementById("membershipForm");
+    // Обработка изменения в форме
+    function handleFormInput(form) {
+        var isFormValid = form.checkValidity();
+        form.querySelector('button[type="submit"]').disabled = !isFormValid;
+    }
 
-    membershipForm.addEventListener('change', function () {
-        var isFormValid = membershipForm.checkValidity();
-        membershipForm.querySelector('button[type="submit"]').disabled = !isFormValid;
-    });
-
-    membershipForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-        alert("Membership Form sent!");
-        membershipForm.reset();
-    });
+    // Обработка отправки формы
+    function handleFormSubmit(form) {
+        var formType = form.id === "sendMessageForm" ? "Message" : "Membership Form";
+        alert(formType + " sent!");
+        form.reset();
+    }
 });
