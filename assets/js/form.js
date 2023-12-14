@@ -3,13 +3,13 @@ console.log('form.js is loaded');
 document.addEventListener("DOMContentLoaded", function () {
      var sendMessageForm = document.getElementById("sendMessageForm");
 
-    sendMessageForm.addEventListener("input", function () {
+    sendMessageForm.addEventListener('input', function () {
         console.log('11');
         var isFormValid = sendMessageForm.checkValidity();
         sendMessageForm.querySelector('button[type="submit"]').disabled = !isFormValid;
     });
 
-    sendMessageForm.addEventListener("submit", function (event) {
+    sendMessageForm.addEventListener('submit', function (event) {
         event.preventDefault();
         alert("Message sent!");
         sendMessageForm.reset();
@@ -17,12 +17,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var membershipForm = document.getElementById("membershipForm");
 
-    membershipForm.addEventListener("input", function () {
+    membershipForm.addEventListener('input', function () {
         var isFormValid = membershipForm.checkValidity();
         membershipForm.querySelector('button[type="submit"]').disabled = !isFormValid;
     });
 
-    membershipForm.addEventListener("submit", function (event) {
+    membershipForm.addEventListener('submit', function (event) {
         event.preventDefault();
         alert("Membership Form sent!");
         membershipForm.reset();
