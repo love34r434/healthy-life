@@ -138,17 +138,15 @@ footer {
 }
 .person.reverse {
     flex-direction: row-reverse;
-
 }
 
 .person .golden-box {
     margin: 0 20px;
-    min-width: 50% 
+    min-width: 50%;
 }
 
 .person .golden-box img {
-    width: 100%;
-    
+    width: 100%;    
 }
 /* forms */
 
@@ -240,7 +238,7 @@ footer {
         padding: 10px;
         border-bottom: 1px solid var(--dark-green); /* Подгоните под ваши нужды */
     }
-    
+
     .person, .person.reverse {
         flex-direction: column;
         justify-content: center;
