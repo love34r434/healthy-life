@@ -134,6 +134,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 40px;
 }
 .person.reverse {
     flex-direction: row-reverse;
@@ -141,13 +142,13 @@ footer {
 }
 
 .person .golden-box {
-    width: 45%;
-    margin: 0 20px 20px;
+    margin: 0 20px;
+    min-width: 50% 
 }
 
 .person .golden-box img {
     width: 100%;
-    max-width: 200px;
+    
 }
 /* forms */
 
@@ -239,10 +240,9 @@ footer {
         padding: 10px;
         border-bottom: 1px solid var(--dark-green); /* Подгоните под ваши нужды */
     }
-
-
+    
     .person, .person.reverse {
-         flex-direction: column;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
