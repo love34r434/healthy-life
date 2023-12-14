@@ -3,7 +3,7 @@ console.log('form.js is loaded');
 document.addEventListener("DOMContentLoaded", function () {
      var sendMessageForm = document.getElementById("sendMessageForm");
 
-    sendMessageForm.addEventListener('input', function () {
+    sendMessageForm.addEventListener('change', function () {
         var isFormValid = sendMessageForm.checkValidity();
         sendMessageForm.querySelector('button[type="submit"]').disabled = !isFormValid;
     });
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var membershipForm = document.getElementById("membershipForm");
 
-    membershipForm.addEventListener('input', function () {
+    membershipForm.addEventListener('change', function () {
         var isFormValid = membershipForm.checkValidity();
         membershipForm.querySelector('button[type="submit"]').disabled = !isFormValid;
     });
