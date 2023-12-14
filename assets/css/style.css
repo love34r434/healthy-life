@@ -173,8 +173,11 @@ footer {
 .panel textarea:invalid {
     border-color: orange;
 }
-
-.panel button {
+.panel input[type=radio] {
+    width: 20px;
+    margin-top: 10px;
+}
+.panel button { 
     background-color: var(--asparagus);
     color: var(--white);
     padding: 14px 20px;
