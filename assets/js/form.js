@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const targetForm = document.getElementById(targetId);
             const otherForms = document.querySelectorAll(".contactForm:not(#" + targetId + ")");
 
-            //Toggle the visibility of the target form
+            // Toggle the visibility of the target form
             if (targetForm.style.display === "block") {
                 targetForm.style.display = "none";
                 this.textContent = "Show Form";
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 this.textContent = "Hide Form";
             }
 
-            //Hide other Forms
+            // Hide other Forms
             otherForms.forEach((form) => (form.style.display = "none"));
         });
     });
@@ -25,21 +25,19 @@ document.addEventListener("DOMContentLoaded", function () {
     var panel = document.querySelector(".panel");
 
     acc.addEventListener("click", function () {
-        panel.style.display =
-            panel.style.display === "block" ? "none" : "block";
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
     });
 
     var sendMessageForm = document.getElementById("sendMessageForm");
 
     sendMessageForm.addEventListener("input", function () {
         var isFormValid = sendMessageForm.checkValidity();
-        sendMessageForm.querySelector('button[type="submit"]').disabled =
-            !isFormValid;
+        sendMessageForm.querySelector('button[type="submit"]').disabled = !isFormValid;
     });
 
     sendMessageForm.addEventListener("submit", function (event) {
         event.preventDefault();
-        alert("Form sent!");
+        alert("Message sent!");
         sendMessageForm.reset();
     });
 
@@ -47,8 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     membershipForm.addEventListener("input", function () {
         var isFormValid = membershipForm.checkValidity();
-        membershipForm.querySelector('button[type="submit"]').disabled =
-            !isFormValid;
+        membershipForm.querySelector('button[type="submit"]').disabled = !isFormValid;
     });
 
     membershipForm.addEventListener("submit", function (event) {
