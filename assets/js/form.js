@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
      var sendMessageForm = document.getElementById("sendMessageForm");
 
     sendMessageForm.addEventListener("input", function () {
-
+        console.log('11');
         var isFormValid = sendMessageForm.checkValidity();
         sendMessageForm.querySelector('button[type="submit"]').disabled = !isFormValid;
     });
