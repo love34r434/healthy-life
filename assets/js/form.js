@@ -1,33 +1,29 @@
+console.log('form.js is loaded');
+
 document.addEventListener("DOMContentLoaded", function () {
-    // Делегирование событий для ввода в формах
-    document.addEventListener("input", function (event) {
-        var form = event.target.form;
+     var sendMessageForm = document.getElementById("sendMessageForm");
 
-        if (form && (form.id === "sendMessageForm" || form.id === "membershipForm")) {
-            handleFormInput(form);
-        }
+    sendMessageForm.addEventListener('input', function () {
+        var isFormValid = sendMessageForm.checkValidity();
+        sendMessageForm.querySelector('button[type="submit"]').disabled = !isFormValid;
     });
 
-    // Делегирование событий для отправки форм
-    document.addEventListener("submit", function (event) {
-        event.preventDefault(); // предотвратить стандартное поведение отправки формы
-        var form = event.target;
-
-        if (form && (form.id === "sendMessageForm" || form.id === "membershipForm")) {
-            handleFormSubmit(form);
-        }
+    sendMessageForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        alert("Message sent!");
+        sendMessageForm.reset();
     });
 
-    // Обработка ввода в форме
-    function handleFormInput(form) {
-        var isFormValid = form.checkValidity();
-        form.querySelector('button[type="submit"]').disabled = !isFormValid;
-    }
+    var membershipForm = document.getElementById("membershipForm");
 
-    // Обработка отправки формы
-    function handleFormSubmit(form) {
-        var formType = form.id === "sendMessageForm" ? "Message" : "Membership Form";
-        alert(formType + " sent!");
-        form.reset();
-    }
+    membershipForm.addEventListener('input', function () {
+        var isFormValid = membershipForm.checkValidity();
+        membershipForm.querySelector('button[type="submit"]').disabled = !isFormValid;
+    });
+
+    membershipForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        alert("Membership Form sent!");
+        membershipForm.reset();
+    });
 });
