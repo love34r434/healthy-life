@@ -142,7 +142,7 @@ footer {
 
 .person .golden-box {
     width: 45%;
-    margin: 0 20px;
+    margin: 0 20px 20px;
 }
 
 .person .golden-box img {
@@ -238,5 +238,16 @@ footer {
         text-align: center;
         padding: 10px;
         border-bottom: 1px solid var(--dark-green); /* Подгоните под ваши нужды */
+    }
+
+
+    .person, .person.reverse {
+         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .person .golden-box {
+        width: 80%;
     }
 }
