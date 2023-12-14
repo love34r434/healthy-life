@@ -133,6 +133,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 .person.reverse {
     flex-direction: row-reverse;
@@ -141,8 +142,13 @@ footer {
 
 .person .golden-box {
     width: 45%;
+    margin: 0 20px;
 }
 
+.person .golden-box img {
+    width: 100%;
+    max-width: 200px;
+}
 /* forms */
 
 .panel {
