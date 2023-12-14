@@ -208,6 +208,9 @@ footer {
     body {
         font-size: 0.6em;
     }
+    h1 {
+        font-size: 1.5em;
+    }
     .menu-toggle {
         display: block;
         color: var(--asparagus);
