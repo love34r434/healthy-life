@@ -156,7 +156,7 @@ footer {
 .panel textarea {
     width: calc(100% - 16px);
     padding: 12px;
-    margin: 8px 0;
+    margin: 8px 0 12px;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -175,7 +175,7 @@ footer {
 }
 .panel input[type=radio] {
     width: 20px;
-    margin-top: 10px;
+    margin: 8px 0;
 }
 .panel button { 
     background-color: var(--asparagus);
