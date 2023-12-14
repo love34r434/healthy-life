@@ -21,13 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    var acc = document.querySelector(".accordion");
-    var panel = document.querySelector(".panel");
-
-    acc.addEventListener("click", function () {
-        panel.style.display = panel.style.display === "block" ? "none" : "block";
-    });
-
     var sendMessageForm = document.getElementById("sendMessageForm");
 
     sendMessageForm.addEventListener("input", function () {
