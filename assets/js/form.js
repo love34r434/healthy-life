@@ -46,4 +46,17 @@
         alert("Form sent!");
         sendMessageForm.reset();
       });
+      var membershipForm = document.getElementById("membershipForm");
+
+      membershipForm.addEventListener("input", function () {
+        var isFormValid = membershipForm.checkValidity();
+        membershipForm.querySelector('button[type="submit"]').disabled =
+          !isFormValid;
+      });
+    
+      membershipForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        alert("Membership Form sent!");
+        membershipForm.reset();
+      });
     });
