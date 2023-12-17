@@ -18,14 +18,28 @@ async function loadContent(pageId) {
             if (pageId === 'contact') {
                 const script = document.createElement('script');
                 script.src = 'assets/js/form.js';
+                script.onload = function () {
+                    // Code to run after form.js is loaded
+                    console.log('form.js has been loaded.');
+                };
                 document.getElementById('add-scripts').appendChild(script);
             }
         })
         .catch(error => console.error('Error fetching content:', error));
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    // Initial load of the page
+    const initialPageId = getPageIdFromUrl(); 
+    loadContent(initialPageId);
+});
+
 window.addEventListener('popstate', function (event) {
     const pageId = event.state ? event.state.pageId : 'index';
     loadContent(pageId);
 });
 
+function getPageIdFromUrl() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('page') || 'index';
+}
