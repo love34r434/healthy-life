@@ -12,7 +12,7 @@ async function loadContent(pageId) {
             document.getElementById('page-title').textContent = pageTitle;
 
             // changing url
-            window.history.pushState({ pageId: pageId }, null, pageId ? `?page=${pageId}` : '/');
+            window.history.pushState({ pageId: pageId }, null, pageId ? `?page=${pageId}` : 'index');
 
             // load script for form and accordion if the page is 'contact'
             if (pageId === 'contact') {
