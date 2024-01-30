@@ -1,0 +1,23 @@
+{
+  "name": "healthy-life",
+  "version": "1.0.0",
+  "description": "Dedalus test task",
+  "main": "main.js",
+  "scripts": {
+    "start": "http-server -o .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/love34r434/healthy-life.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/love34r434/healthy-life/issues"
+  },
+  "homepage": "https://github.com/love34r434/healthy-life#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
